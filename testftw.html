@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple-Choice Test</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .test-form {
+            max-width: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-form">
+        <h2>Multiple-Choice Test</h2>
+        <form id="testForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What is one reason highlighted in the video for learning C++?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q1" value="It's a slow language"> ParisIt's a slow language</label></li>
+                    <li><label><input type="radio" name="q1" value="It's commonly used in creating video games
+                        "> It's commonly used in creating video games
+                    </label></li>
+                    <li><label><input type="radio" name="q1" value="It's similar to human language
+                        "> It's similar to human language
+                    </label></li>
+                    <li><label><input type="radio" name="q1" value="It's mostly used in basic applications
+
+                        "> It's mostly used in basic applications
+
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. Which of the following is NOT mentioned as an integrated development environment (IDE) in the video?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q2" value="VS Code">VS Code</label></li>
+                    <li><label><input type="radio" name="q2" value="Code Blocks"> Code Blocks</label></li>
+                    <li><label><input type="radio" name="q2" value="Notepad"> Notepad</label></li>
+                    <li><label><input type="radio" name="q2" value="Visual Studio"> Visual Studio</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. What is the purpose of a compiler in programming?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q3" value="It writes the code for you"> It writes the code for you</label></li>
+                    <li><label><input type="radio" name="q3" value="It translates source code to machine instructions"> It translates source code to machine instructions</label></li>
+                    <li><label><input type="radio" name="q3" value="It designs user interfaces"> It designs user interfaces</label></li>
+                    <li><label><input type="radio" name="q3" value="It creates graphics for programs"> It creates graphics for programs</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. Where can you find the bin folder of MinGW according to the video?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q4" value="Inside a zip file"> Inside a zip file</label></li>
+                    <li><label><input type="radio" name="q4" value="On the desktop"> On the desktop</label></li>
+                    <li><label><input type="radio" name="q4" value="Within the C drive"> Within the C drive</label></li>
+                    <li><label><input type="radio" name="q4" value="In the documents folder"> In the documents folder</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. What is the main function used for in a C++ program?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q5" value="Storing backups"> Storing backups</label></li>
+                    <li><label><input type="radio" name="q5" value="Beginning the program's execution"> Beginning the program's execution</label></li>
+                    <li><label><input type="radio" name="q5" value="Playing sound effects"> Playing sound effects</label></li>
+                    <li><label><input type="radio" name="q5" value="Ending the program"> Ending the program</label></li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code to handle form submission
+        document.getElementById('testForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Process the answers here
+            const formData = new FormData(event.target);
+            const answers = {
+                q1: formData.get('q1'),
+                q2: formData.get('q2'),
+                q3: formData.get('q3'),
+                q4: formData.get('q4'),
+                q5: formData.get('q5'),
+            };
+            console.log('User answers:', answers);
+        });
+    </script>
+</body>
+
+</html>

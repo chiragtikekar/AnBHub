@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        #main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        video {
+            width: 100%;
+        }
+        
+        #video-summary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div id="main-content">
+        <h1>C++ tutorial for beginners </h1>
+        <iframe width="100%" height="100%"
+            src="https://www.youtube.com/embed/S3nx34WFXjI?si=4MwGDlJqagrpchD2">
+        </iframe>
+        <div id="video-summary">
+            <h2>Summary</h2>
+            <p id="summary-text">C++ is a fast language commonly used in graphics applications and video games. It requires effort to learn, but offers potential for high-paying jobs.
+                <br>
+            <br>    💡 C++ is a middle-level language that combines human language readability with hardware-level optimization.
+            <br>    💡 Learning C++ can lead to high-paying job opportunities as a software engineer.
+            <br>    💡 VS Code is a popular text editor that provides useful tools for C++ development.
+            <br>    💡 Installing compilers like GCC and Clang is essential for compiling C++ code into machine instructions.
+            <br>    💡 Output statements in C++ are used to display text, and new line characters help format the output.
+            <br>    💡 Comments in C++ are used to add notes or explanations within the code.
+            <br>    💡 C++ programming requires practice, portfolio building, and job interview skills to increase job prospects.</p>
+        </div>
+    </div>
+    <div class="test-form">
+        <h2>Multiple-Choice Test</h2>
+        <form id="testForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What is one reason highlighted in the video for learning C++?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q1" value="It's a slow language"> ParisIt's a slow language</label></li>
+                    <li><label><input type="radio" name="q1" value="It's commonly used in creating video games
+                        "> It's commonly used in creating video games
+                    </label></li>
+                    <li><label><input type="radio" name="q1" value="It's similar to human language
+                        "> It's similar to human language
+                    </label></li>
+                    <li><label><input type="radio" name="q1" value="It's mostly used in basic applications
+
+                        "> It's mostly used in basic applications
+
+                    </label></li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. Which of the following is NOT mentioned as an integrated development environment (IDE) in the video?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q2" value="VS Code">VS Code</label></li>
+                    <li><label><input type="radio" name="q2" value="Code Blocks"> Code Blocks</label></li>
+                    <li><label><input type="radio" name="q2" value="Notepad"> Notepad</label></li>
+                    <li><label><input type="radio" name="q2" value="Visual Studio"> Visual Studio</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>3. What is the purpose of a compiler in programming?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q3" value="It writes the code for you"> It writes the code for you</label></li>
+                    <li><label><input type="radio" name="q3" value="It translates source code to machine instructions"> It translates source code to machine instructions</label></li>
+                    <li><label><input type="radio" name="q3" value="It designs user interfaces"> It designs user interfaces</label></li>
+                    <li><label><input type="radio" name="q3" value="It creates graphics for programs"> It creates graphics for programs</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>4. Where can you find the bin folder of MinGW according to the video?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q4" value="Inside a zip file"> Inside a zip file</label></li>
+                    <li><label><input type="radio" name="q4" value="On the desktop"> On the desktop</label></li>
+                    <li><label><input type="radio" name="q4" value="Within the C drive"> Within the C drive</label></li>
+                    <li><label><input type="radio" name="q4" value="In the documents folder"> In the documents folder</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <h3>5. What is the main function used for in a C++ program?</h3>
+                <ul class="options">
+                    <li><label><input type="radio" name="q5" value="Storing backups"> Storing backups</label></li>
+                    <li><label><input type="radio" name="q5" value="Beginning the program's execution"> Beginning the program's execution</label></li>
+                    <li><label><input type="radio" name="q5" value="Playing sound effects"> Playing sound effects</label></li>
+                    <li><label><input type="radio" name="q5" value="Ending the program"> Ending the program</label></li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        function loadVideo(videoSource, summaryText) {
+            var videoPlayer = document.getElementById('video-player');
+            var summary = document.getElementById('summary-text');
+            
+            videoPlayer.src = videoSource;
+            summary.innerText = summaryText;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.floating
+{
+  background: rgba(255, 255, 255, 0.7);
+}
+.lg\:w-55per {
+    width: 55%;
+}
+.lg\:w-40per {
+  width: 40%;
+}
+.inputBox
+{
+  position: relative;
+  width: 30.55rem;
+  /* background-color: aqua; */
+}
+.inputBoxSmall
+{
+  position: relative;
+}
+.inputBox input 
+.inputBox textarea
+{
+  width: 100%;
+}
+.inputBox .inputSmall
+{
+  width: 100%;
+}
+.inputBox span
+{
+  position: absolute;
+  left: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgba(55, 65, 81, 0.5);
+  font-weight: 400;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span, 
+.inputBox input:focus ~ span
+{
+  color: rgb(79, 70, 229);   
+  transform: translateX(0.625rem) translateY(-0.9rem);
+  font-size: 0.9rem;
+  padding: 0rem 0.5rem;
+  background-color: white;
+}
+.inputBox input:valid, 
+.inputBox input:focus
+{
+  color: rgb(79, 70, 229);
+  border-color: rgb(79, 70, 229);
+}
+.inputBox textarea:valid ~ span, 
+.inputBox textarea:focus ~ span
+{
+  color: rgb(79, 70, 229);   
+  transform: translateX(0.625rem) translateY(-0.9rem);
+  font-size: 0.9rem;
+  padding: 0rem 0.5rem;
+  background-color: white;
+}
+.inputBox textarea:valid, 
+.inputBox textarea:focus
+{
+  color: rgb(79, 70, 229);
+  border-color: rgb(79, 70, 229);
+}
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
